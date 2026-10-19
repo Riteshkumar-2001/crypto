@@ -1,0 +1,210 @@
+/* ═══════════════════════════════════════════════════════
+   journal.css — load after app.css and header.css
+   Self-contained: does not depend on positions.css / orders.css.
+   ═══════════════════════════════════════════════════════ */
+
+/* Bootstrap's text-* utilities → site palette */
+.text-success, .pnl-positive, .pnl-up, .profit { color: var(--green) !important; }
+.text-danger,  .pnl-negative, .pnl-down, .loss { color: var(--red)   !important; }
+.text-info { color: #6cb2ff !important; }
+
+/* ── Summary cards ───────────────────────── */
+.stat-card {
+  height: 100%;
+  padding: .75rem .95rem;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  margin-top: .2rem;
+  color: var(--text-strong);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.stat-sub {
+  margin-top: .15rem;
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+/* ── Cards + toolbars ────────────────────── */
+.chart-card,
+.journal-card { padding: 0; }
+
+.journal-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  padding: .65rem 1rem;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--bg-raise);
+}
+
+.journal-toolbar h2 {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0;
+  color: var(--text-strong);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.journal-toolbar h2 i { color: var(--muted); }
+
+.count-pill {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-hi);
+  color: var(--text);
+  font-size: .64rem;
+  font-weight: 700;
+}
+
+.btn-outline-info {
+  --bs-btn-color: #6cb2ff;
+  --bs-btn-border-color: rgba(108, 178, 255, .4);
+  --bs-btn-hover-color: #06101c;
+  --bs-btn-hover-bg: #6cb2ff;
+  --bs-btn-hover-border-color: #6cb2ff;
+  --bs-btn-font-size: .75rem;
+  --bs-btn-padding-y: .25rem;
+  --bs-btn-padding-x: .7rem;
+}
+
+/* ── Equity chart (Chart.js canvas) ──────── */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 40vh, 380px);
+  padding: .9rem 1rem;
+  background: var(--input-bg);
+}
+
+/* ── Trade log (div grid, 10 columns) ────── */
+.journal-list-container {
+  --journal-cols: .6fr 1fr .6fr .6fr 1fr 1fr 1fr 1fr 1.5fr 1.5fr;
+  display: flex;
+  flex-direction: column;
+  min-width: 1100px; /* dense data: scrolls sideways on small screens */
+}
+
+.list-header,
+.list-row {
+  display: grid;
+  grid-template-columns: var(--journal-cols);
+  align-items: center;
+  column-gap: .5rem;
+  padding: .55rem 1rem;
+}
+
+.list-header {
+  border-bottom: 1px solid var(--card-border);
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.list-row {
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text);
+  font-size: .82rem;
+  transition: background-color .12s ease;
+}
+
+.list-row:last-child { border-bottom: 0; }
+.list-row:hover { background: rgba(255, 255, 255, .03); color: var(--text-strong); }
+
+.list-col {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-col.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ── Badges (side / status) ──────────────── */
+.badge,
+.side-badge {
+  display: inline-block;
+  padding: .2rem .5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* keep the header's pill badge as it is */
+.conn-badge { padding: .22rem .6rem .22rem .5rem; border-radius: 999px; }
+
+.side-badge.buy,  .side-badge.long,
+.badge.bg-success-subtle {
+  color: var(--green) !important;
+  background: rgba(46, 204, 143, .12) !important;
+  border-color: rgba(46, 204, 143, .3);
+}
+
+.side-badge.sell, .side-badge.short,
+.badge.bg-danger-subtle {
+  color: var(--red) !important;
+  background: rgba(255, 92, 108, .12) !important;
+  border-color: rgba(255, 92, 108, .3);
+}
+
+.badge.bg-info-subtle {
+  color: #6cb2ff !important;
+  background: rgba(108, 178, 255, .12) !important;
+  border-color: rgba(108, 178, 255, .3);
+}
+
+.badge.bg-dark-subtle {
+  color: var(--muted) !important;
+  background: rgba(255, 255, 255, .05) !important;
+  border-color: var(--card-border-hi);
+}
+
+/* ── Empty state ─────────────────────────── */
+.list-row-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.list-row-empty i {
+  display: block;
+  margin-bottom: .4rem;
+  color: var(--card-border-hi);
+  font-size: 1.8rem;
+}
+
+.empty-title { color: var(--text); font-size: .85rem; font-weight: 600; }
+.empty-sub   { margin-top: .15rem; font-size: .74rem; }
+
+/* ── Small screens ───────────────────────── */
+@media (max-width: 575.98px) {
+  .journal-toolbar { padding: .6rem .75rem; }
+  .chart-container { padding: .6rem .5rem; }
+}

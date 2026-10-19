@@ -1,0 +1,61 @@
+/* header.css — load after app.css.
+   Layout comes from Bootstrap (navbar, nav-underline, utilities);
+   this file only maps Bootstrap's CSS variables to the site palette. */
+
+/* Match Bootstrap's borders / surfaces to the app palette */
+.trading-header,
+.paper-strip {
+  --bs-border-color: var(--card-border);
+}
+
+.paper-strip {
+  background: var(--bg-raise);
+}
+
+.paper-note {
+  color: var(--muted);
+}
+
+.bitquote {
+  --bs-link-color-rgb: 46, 204, 143;
+  --bs-link-hover-color-rgb: 244, 247, 251;
+  font-weight: 500;
+}
+
+/* Navbar */
+.trading-header .navbar {
+  --bs-navbar-brand-color: var(--text-strong);
+  --bs-navbar-brand-hover-color: var(--text-strong);
+}
+
+.trading-header .navbar-brand i {
+  color: var(--green);
+}
+
+/* nav-underline theming via Bootstrap variables */
+.header-nav {
+  --bs-nav-link-color: var(--muted);
+  --bs-nav-link-hover-color: var(--text-strong);
+  --bs-nav-link-padding-y: .8rem;
+  --bs-nav-link-font-size: .8rem;
+  --bs-nav-underline-link-active-color: var(--text-strong);
+}
+
+/* Bootstrap draws the active underline in currentColor; make it green */
+.header-nav .nav-link.active {
+  border-bottom-color: var(--green);
+}
+
+.header-nav .nav-link.active i {
+  color: var(--green);
+}
+
+.header-nav .nav-link i {
+  font-size: 1rem;
+}
+
+/* Font Awesome icons: fixed width so labels line up */
+.header-nav .nav-link i {
+  width: 1.1em;
+  text-align: center;
+}

@@ -1,0 +1,218 @@
+/* ═══════════════════════════════════════════════════════
+   orders.css — Open Orders + History
+   Load after app.css and header.css (self-contained: it
+   does not depend on positions.css).
+   ═══════════════════════════════════════════════════════ */
+
+/* P&L colours: every naming style in use */
+.pnl-positive, .pnl-up,   .profit { color: var(--green) !important; }
+.pnl-negative, .pnl-down, .loss   { color: var(--red)   !important; }
+
+/* ── Summary cards ───────────────────────── */
+.stat-card {
+  height: 100%;
+  padding: .75rem .95rem;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  margin-top: .2rem;
+  color: var(--text-strong);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Bootstrap's text-* utilities → site palette */
+.stat-value.text-success { color: var(--green) !important; }
+.stat-value.text-danger  { color: var(--red)   !important; }
+
+.stat-sub {
+  margin-top: .15rem;
+  color: var(--muted);
+  font-size: .7rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-sub span { color: var(--text); font-weight: 500; }
+
+/* ── Table cards: toolbar + flush table ──── */
+main > .trading-card { padding: 0; }
+
+.positions-toolbar {
+  display: flex;
+  flex-wrap: nowrap;          /* one line, button stays on the right */
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .65rem 1rem;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--bg-raise);
+}
+
+.positions-toolbar h2 {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0;
+  color: var(--text-strong);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+
+.positions-toolbar h2 i { color: var(--muted); }
+
+.positions-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.count-pill {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-hi);
+  color: var(--text);
+  font-size: .64rem;
+  font-weight: 700;
+}
+
+.btn-outline-danger {
+  --bs-btn-color: var(--red);
+  --bs-btn-border-color: rgba(255, 92, 108, .4);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--red);
+  --bs-btn-hover-border-color: var(--red);
+  --bs-btn-disabled-color: var(--muted);
+  --bs-btn-disabled-border-color: var(--input-border);
+  --bs-btn-font-size: .75rem;
+  --bs-btn-padding-y: .25rem;
+  --bs-btn-padding-x: .7rem;
+}
+
+/* ── Tables (Bootstrap variables) ────────── */
+.positions-table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text);
+  --bs-table-border-color: var(--card-border);
+  --bs-table-hover-bg: rgba(255, 255, 255, .03);
+  --bs-table-hover-color: var(--text-strong);
+  min-width: 760px;           /* scrolls sideways on small screens */
+  font-size: .82rem;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.positions-table > :not(caption) > * > * {
+  padding: .55rem .85rem;
+  vertical-align: middle;
+}
+
+.positions-table thead th {
+  background: var(--bg-raise);
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom-color: var(--card-border);
+}
+
+.positions-table tbody td { white-space: nowrap; }
+.positions-table tbody tr:last-child > * { border-bottom: 0; }
+
+/* Numeric columns are right-aligned (header by class, cells by position) */
+.col-price, .col-distance,
+.col-size, .col-entry, .col-exit, .col-pnl, .col-pnl-pct { text-align: right; }
+
+#open-orders-body td:nth-child(4),
+#open-orders-body td:nth-child(6),
+#orders-body td:nth-child(n+4):nth-child(-n+8) { text-align: right; }
+
+.pos-sym { color: var(--text-strong); font-weight: 700; letter-spacing: .02em; }
+
+/* ── Badges ──────────────────────────────── */
+.positions-table .badge,
+.side-badge {
+  display: inline-block;
+  padding: .22rem .5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.side-badge.buy,  .side-badge.long  { color: var(--green); background: rgba(46, 204, 143, .12); border-color: rgba(46, 204, 143, .3); }
+.side-badge.sell, .side-badge.short { color: var(--red);   background: rgba(255, 92, 108, .12); border-color: rgba(255, 92, 108, .3); }
+
+.badge.bg-info-subtle {
+  background: rgba(108, 178, 255, .12) !important;
+  border-color: rgba(108, 178, 255, .3);
+  color: #6cb2ff !important;
+}
+
+.badge.bg-dark-subtle {
+  background: rgba(255, 255, 255, .05) !important;
+  border-color: var(--card-border-hi);
+  color: var(--muted) !important;
+}
+
+/* ── Cancel button (square icon) ─────────── */
+.btn-cancel-order {
+  --bs-btn-color: var(--red);
+  --bs-btn-border-color: rgba(255, 92, 108, .35);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--red);
+  --bs-btn-hover-border-color: var(--red);
+  --bs-btn-border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  padding: 0 !important;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.btn-cancel-order i { margin: 0; font-size: .68rem; }
+
+/* ── Empty state ─────────────────────────── */
+tbody tr:has(> .empty-row) { --bs-table-hover-bg: transparent; }
+
+.empty-row {
+  padding: 2.25rem 1rem !important;
+  text-align: center !important;
+  color: var(--muted);
+}
+
+.empty-row i {
+  display: block;
+  margin-bottom: .4rem;
+  color: var(--card-border-hi);
+  font-size: 1.8rem;
+}
+
+.empty-title { color: var(--text); font-size: .85rem; font-weight: 600; }
+.empty-sub   { margin-top: .15rem; font-size: .74rem; }
+
+/* ── Small screens ───────────────────────── */
+@media (max-width: 575.98px) {
+  .positions-toolbar { padding: .6rem .75rem; gap: .5rem; }
+
+  .positions-table > :not(caption) > * > * { padding: .5rem .65rem; }
+}

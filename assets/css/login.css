@@ -1,0 +1,202 @@
+/* ═══════════════════════════════════════════════════════
+   login.css — load after app.css (uses its tokens)
+   ═══════════════════════════════════════════════════════ */
+
+.login-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+}
+
+/* ── Card ────────────────────────────────── */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-top: 2px solid var(--green);
+}
+
+/* ── Brand ───────────────────────────────── */
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-logo {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: var(--radius-md);
+  background: rgba(46, 204, 143, .12);
+  border: 1px solid rgba(46, 204, 143, .3);
+  color: var(--green);
+  font-size: 1.1rem;
+}
+
+.login-title {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+.login-sub {
+  color: var(--muted);
+  font-size: .76rem;
+}
+
+/* ── Error alert ─────────────────────────── */
+.login-error {
+  --bs-alert-bg: rgba(255, 92, 108, .1);
+  --bs-alert-border-color: rgba(255, 92, 108, .35);
+  --bs-alert-color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  padding: .55rem .75rem;
+  border-radius: var(--radius-md);
+  font-size: .78rem;
+  font-weight: 500;
+}
+
+/* ── Fields ──────────────────────────────── */
+.login-card .form-label {
+  margin-bottom: .3rem;
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.login-card .input-group {
+  border-radius: var(--radius-md);
+  transition: box-shadow .15s ease;
+}
+
+.login-card .input-group:focus-within {
+  box-shadow: 0 0 0 3px rgba(46, 204, 143, .15);
+}
+
+.login-card .input-group-text,
+.login-card .form-control {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-strong);
+  font-size: .88rem;
+}
+
+.login-card .input-group-text {
+  width: 2.6rem;
+  justify-content: center;
+  border-right: 0;
+  color: var(--muted);
+}
+
+.login-card .form-control {
+  padding: .6rem .75rem;
+  font-weight: 500;
+}
+
+.login-card .form-control::placeholder { color: var(--muted); opacity: .8; }
+
+.login-card .form-control:focus {
+  background-color: var(--input-bg);
+  color: var(--text-strong);
+  border-color: var(--green);
+  box-shadow: none;
+}
+
+.login-card .input-group:focus-within .input-group-text {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* Validation (Bootstrap .was-validated) */
+.login-card .was-validated .form-control:invalid,
+.login-card .was-validated .form-control:invalid:focus { border-color: var(--red); }
+.login-card .was-validated .form-control:invalid ~ .input-group-text,
+.login-card .was-validated .input-group:has(.form-control:invalid) .input-group-text {
+  border-color: var(--red);
+  color: var(--red);
+}
+.login-card .was-validated .form-control:valid { border-color: var(--input-border); background-image: none; }
+.login-card .invalid-feedback { color: var(--red); font-size: .72rem; }
+
+/* Browser autofill keeps the dark field */
+.login-card .form-control:-webkit-autofill,
+.login-card .form-control:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-strong);
+  caret-color: var(--text-strong);
+  box-shadow: 0 0 0 1000px var(--input-bg) inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* ── Show password checkbox ──────────────── */
+.login-card .form-check-label {
+  color: var(--text);
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.login-card .form-check-input {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  cursor: pointer;
+}
+
+.login-card .form-check-input:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.login-card .form-check-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(46, 204, 143, .15);
+}
+
+/* ── Sign in button ──────────────────────── */
+.btn-login {
+  --bs-btn-bg: var(--green);
+  --bs-btn-border-color: var(--green);
+  --bs-btn-color: #04130c;
+  --bs-btn-hover-bg: #27b87f;
+  --bs-btn-hover-border-color: #27b87f;
+  --bs-btn-hover-color: #04130c;
+  --bs-btn-active-bg: #22a673;
+  --bs-btn-active-border-color: #22a673;
+  --bs-btn-active-color: #04130c;
+  --bs-btn-disabled-bg: var(--green);
+  --bs-btn-disabled-border-color: var(--green);
+  padding: .65rem 1rem;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.btn-login i { margin-right: .4rem; }
+
+/* ── Footer note ─────────────────────────── */
+.login-foot {
+  margin-top: 1.1rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--card-border);
+  color: var(--muted);
+  font-size: .7rem;
+  text-align: center;
+}
+
+.login-foot i { margin-right: .3rem; }
+
+@media (max-width: 420px) {
+  .login-card { padding: 1.25rem 1.1rem 1rem; }
+}

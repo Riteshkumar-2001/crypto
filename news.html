@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hacker News — biquote</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/news.css" rel="stylesheet" />
+</head>
+
+  <script src="assets/js/auth-guard.js"></script>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-globe2 me-2"></i>biquote
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="positions.html"><i class="bi bi-briefcase me-1"></i>Positions</a></li>
+          <li class="nav-item"><a class="nav-link" href="orders.html"><i class="bi bi-list-check me-1"></i>Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="journal.html"><i class="bi bi-journal-text me-1"></i>Journal</a></li>
+          <li class="nav-item"><a class="nav-link active" href="news.html"><i class="bi bi-newspaper me-1"></i>News</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Search -->
+  <section class="hero-section">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold mb-2">
+        <i class="bi bi-braces-asterisk me-2"></i>Hacker News
+      </h1>
+      <p class="text-muted mb-4">Front-page stories &amp; relevance search via biquote</p>
+
+      <div class="search-box mx-auto">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text bg-dark border-secondary text-light">
+            <i class="bi bi-search"></i>
+          </span>
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control bg-dark border-secondary text-light"
+            placeholder="Search stories — e.g. bitcoin, trading, ai …"
+            autocomplete="off"
+          />
+          <button id="searchBtn" class="btn btn-primary px-4">
+            <i class="bi bi-search me-1"></i>Search
+          </button>
+          <button id="resetBtn" class="btn btn-outline-light px-4 d-none">
+            <i class="bi bi-arrow-counterclockwise me-1"></i>Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories -->
+  <section class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h5 class="mb-0 fw-semibold">
+        <i class="bi bi-list-ol me-1"></i>Stories
+      </h5>
+      <span id="storyCount" class="badge bg-secondary"></span>
+    </div>
+
+    <!-- Loading -->
+    <div id="loader" class="text-center py-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading…</span>
+      </div>
+      <p class="text-muted mt-3">Loading stories …</p>
+    </div>
+
+    <!-- Error -->
+    <div id="errorBox" class="alert alert-danger d-none" role="alert">
+      <i class="bi bi-exclamation-triangle me-2"></i>
+      <span id="errorMsg"></span>
+    </div>
+
+    <!-- Cards -->
+    <div id="storiesList" class="stories-grid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 text-muted border-top border-secondary mt-5">
+    <small>Powered by <a href="https://biquote.io" target="_blank" class="text-primary">biquote.io</a> &middot; HN Front Page API</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/news.js"></script>
+
+</body>
+</html>

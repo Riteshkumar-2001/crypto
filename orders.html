@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <title>Paper Trading — Orders History</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/orders.css">
+</head>
+
+  <script src="assets/js/auth-guard.js"></script>
+
+<body>
+
+  <!-- Note strip -->
+  <div class="paper-strip border-bottom py-1">
+    <div class="container">
+      <p class="paper-note text-start small mb-0">
+        Streaming over one SignalR WebSocket at
+        <a href="https://biquote.io/" target="_blank" rel="noopener"
+          class="bitquote link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">bitquote</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="trading-header sticky-top border-bottom">
+    <nav class="navbar navbar-expand p-0" aria-label="Primary">
+      <div class="container align-items-stretch">
+
+        <div class="header-left d-flex align-items-center">
+          <h1 class="navbar-brand fs-6 fw-semibold d-flex align-items-center gap-2 m-0 py-2">
+            <i class="fa-solid fa-tower-broadcast"></i> Live Ticker
+            <span class="conn-badge badge rounded-pill" id="conn-status">CONNECTING</span>
+          </h1>
+        </div>
+
+        <div class="header-nav nav nav-underline ms-auto align-items-stretch">
+          <a href="index.html" class="nav-link d-flex align-items-center gap-2" title="Dashboard">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <span class="nav-label d-none d-md-inline">Dashboard</span>
+          </a>
+          <a href="positions.html" class="nav-link d-flex align-items-center gap-2" title="Positions">
+            <i class="fa-solid fa-building-columns"></i>
+            <span class="nav-label d-none d-md-inline">Positions</span>
+          </a>
+          <a href="orders.html" class="nav-link active d-flex align-items-center gap-2" title="Orders"
+            aria-current="page">
+            <i class="fa-solid fa-list-check"></i>
+            <span class="nav-label d-none d-md-inline">Orders</span>
+          </a>
+          <a href="journal.html" class="nav-link d-flex align-items-center gap-2" title="Journal">
+            <i class="fa-solid fa-book"></i>
+            <span class="nav-label d-none d-md-inline">Journal</span>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+  <main class="container py-3">
+
+    <!-- Performance Summary -->
+    <section class="row g-3 mb-3" aria-label="Orders Performance Summary">
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Total Closed Trades</div>
+          <div class="stat-value text-white" id="stat-total-orders">0</div>
+          <div class="stat-sub"><span id="stat-win-rate">0.0%</span> Win Rate</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Net Realized P&L</div>
+          <div class="stat-value" id="stat-net-pnl">$0.00</div>
+          <div class="stat-sub">Lifetime Net Profit</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Winning Trades</div>
+          <div class="stat-value text-success" id="stat-wins">0</div>
+          <div class="stat-sub" id="stat-profit-sum">+$0.00</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Losing Trades</div>
+          <div class="stat-value text-danger" id="stat-losses">0</div>
+          <div class="stat-sub" id="stat-loss-sum">-$0.00</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Open Orders ═══ -->
+    <section class="trading-card" aria-label="Open orders">
+      <div class="positions-toolbar">
+        <h2>
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          Open Orders (TP / SL)
+          <span class="badge rounded-pill count-pill" id="open-orders-count">0</span>
+        </h2>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0 positions-table">
+          <thead>
+            <tr>
+              <th scope="col" class="col-symbol">Symbol</th>
+              <th scope="col" class="col-side">Side</th>
+              <th scope="col" class="col-type">Type</th>
+              <th scope="col" class="col-price">Price</th>
+              <th scope="col" class="col-related">Related Position</th>
+              <th scope="col" class="col-distance">Distance</th>
+              <th scope="col" class="col-status">Status</th>
+              <th scope="col" class="col-action text-end">Action</th>
+            </tr>
+          </thead>
+          <tbody id="open-orders-body">
+            <tr id="open-orders-empty">
+              <td colspan="8" class="empty-row">
+                <i class="fa-solid fa-inbox"></i>
+                <div class="empty-title">No open orders</div>
+                <div class="empty-sub">Open positions with SL / TP will appear here.</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══ Order History ═══ -->
+    <section class="trading-card mt-3" aria-label="Order history">
+      <div class="positions-toolbar">
+        <h2>
+          <i class="fa-solid fa-book"></i>
+          Order History
+          <span class="badge rounded-pill count-pill" id="orders-count">0</span>
+        </h2>
+        <div class="positions-actions">
+          <button type="button" class="btn btn-sm btn-outline-danger" id="btn-clear-history">
+            <i class="fa-solid fa-trash"></i> Clear History
+          </button>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0 positions-table">
+          <thead>
+            <tr>
+              <th scope="col" class="col-symbol">Symbol</th>
+              <th scope="col" class="col-side">Side</th>
+              <th scope="col" class="col-type">Type</th>
+              <th scope="col" class="col-size">Size</th>
+              <th scope="col" class="col-entry">Entry</th>
+              <th scope="col" class="col-exit">Exit</th>
+              <th scope="col" class="col-pnl">P&L</th>
+              <th scope="col" class="col-pnl-pct">P&L %</th>
+              <th scope="col" class="col-date">Closed Date</th>
+            </tr>
+          </thead>
+          <tbody id="orders-body">
+            <tr id="orders-empty">
+              <td colspan="9" class="empty-row">
+                <i class="fa-solid fa-inbox"></i>
+                <div class="empty-title">No closed orders yet</div>
+                <div class="empty-sub">When you close open positions, they will appear here.</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/ws.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/orders.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,4041 @@
+[
+    {
+        "name": "EURDKK",
+        "description": "Euro vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDBDT",
+        "description": "US Dollar vs Bangladeshi taka",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDEGP",
+        "description": "US Dollar vs Egyptian Pound",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDKES",
+        "description": "US Dollar vs Kenyan Shilling",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDNGN",
+        "description": "US Dollar vs Nigerian naira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDPKR",
+        "description": "US Dollar vs Pakistan Rupee",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDGHS",
+        "description": "US Dollar vs Ghanaian Cedi",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDCNY",
+        "description": "US Dollar vs Yuan Renminbi",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "DKKCZK",
+        "description": "Danish Krona vs Czech Koruna",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDPHP",
+        "description": "US Dollar vs Philippine Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDLKR",
+        "description": "US Dollar vs Sri Lankan Rupee",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDBND",
+        "description": "US Dollar vs Brunei Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDARS",
+        "description": "US Dollar vs Argentine Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDVND",
+        "description": "US Dollar vs Vietnamese dong",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "HUFJPY",
+        "description": "Forint vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "MARAUSDT",
+        "description": "MARA Holdings",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GPROUSDT",
+        "description": "GoPro",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "RUMUSDT",
+        "description": "Rumble",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ZSUSDT",
+        "description": "Zscaler",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDXOF",
+        "description": "US Dollar vs West African CFA",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AEDTRY_HKN",
+        "description": "AED / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "EURRUB_HKN",
+        "description": "EUR / RUB (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "QARTRY_HKN",
+        "description": "QAR / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "SARTRY_HKN",
+        "description": "SAR / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "USDAED_HKN",
+        "description": "USD / AED (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "USDQAR_HKN",
+        "description": "USD / QAR (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "USDRUB_HKN",
+        "description": "USD / RUB (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "USDSAR_HKN",
+        "description": "USD / SAR (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "LLYUSDT",
+        "description": "Eli Lilly",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XPBUSD",
+        "description": "Lead vs US Dollar",
+        "type": "Commodity",
+        "exchange": "OTC",
+        "source": "MT5"
+    },
+    {
+        "name": "AKAMUSDT",
+        "description": "AKAM",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GIGADEVUSDT",
+        "description": "GigaDevice Semiconductor",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "VUSDT",
+        "description": "Visa",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "WENUSDT",
+        "description": "Wendy's",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "HDUSDT",
+        "description": "Home Depot",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SAMSUNGEMUSDT",
+        "description": "Samsung Electro-Mechanics",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "COSTUSDT",
+        "description": "Costco",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PLNHUF",
+        "description": "Zloty vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "XOMUSDT",
+        "description": "ExxonMobil",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "TEAMUSDT",
+        "description": "Atlassian",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EBAYUSDT",
+        "description": "eBay",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "TEMUSDT",
+        "description": "Tempus AI",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CADCZK",
+        "description": "Canadian Dollar vs Czech Koruna",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "HPEUSDT",
+        "description": "Hewlett Packard Enterprise",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "LYTEUSDT",
+        "description": "Roundhill Photonics & Optics ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "BOTUSDT",
+        "description": "RoboStrategy",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "BXUSDT",
+        "description": "Blackstone",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GSUSDT",
+        "description": "Goldman Sachs",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "JODTRY_HRM",
+        "description": "JOD / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "KWDTRY_HRM",
+        "description": "KWD / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "SARTRY_HRM",
+        "description": "SAR / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "USDTRY_HRM",
+        "description": "USD / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "WMTUSDT",
+        "description": "Walmart",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CRMLUSDT",
+        "description": "CRML",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "IBMUSDT",
+        "description": "IBM",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SONYUSDT",
+        "description": "Sony Group",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XNGUSD",
+        "description": "Natural Gas vs US Dollar",
+        "type": "Commodity",
+        "exchange": "OTC",
+        "source": "MT5"
+    },
+    {
+        "name": "BITOUSDT",
+        "description": "ProShares Bitcoin Strategy ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURHUF",
+        "description": "Euro vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "PYPLUSDT",
+        "description": "PayPal",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CSCOUSDT",
+        "description": "Cisco Systems",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDCZK",
+        "description": "New Zealand Dollar vs Czech Koruna",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDISK",
+        "description": "US Dollar vs Iceland Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "NETUSDT",
+        "description": "Cloudflare",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDAED",
+        "description": "US Dollar vs United Arab Emirates Dirham",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDIDR",
+        "description": "US Dollar vs Rupiah",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "APLDUSDT",
+        "description": "Applied Digital",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CHFHUF",
+        "description": "Swiss Franc vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "SEKJPY",
+        "description": "Swedish Krona vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDUAH",
+        "description": "US Dollar vs Hryvnia",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "NZDHUF",
+        "description": "New Zealand Dollar vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURCAD_HKN",
+        "description": "EUR / CAD (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "GEVUSDT",
+        "description": "GE Vernova",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "KUAISHOUUSDT",
+        "description": "Kuaishou Technology",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDCAD_HKN",
+        "description": "USD / CAD (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "VKTXUSDT",
+        "description": "VKTX",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPCZK",
+        "description": "Great Britain Pound vs Czech Koruna",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "OKLOUSDT",
+        "description": "Oklo",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "LRCXUSDT",
+        "description": "Lam Research",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "MEITUANUSDT",
+        "description": "Meituan",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NAVERUSDT",
+        "description": "NAVER",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "STRCUSDT",
+        "description": "Strategy Stretch Preferred",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XLEUSDT",
+        "description": "Energy Select Sector SPDR Fund",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CYPHUSDT",
+        "description": "Cypherpunk Technologies",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "KOUSDT",
+        "description": "Coca-Cola",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "MPUSDT",
+        "description": "MP",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PATHUSDT",
+        "description": "UiPath",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "POPMARTUSDT",
+        "description": "Pop Mart International",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "URNMUSDT",
+        "description": "Sprott Uranium Miners ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ZARJPY",
+        "description": "South African Rand vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "TTWOUSDT",
+        "description": "Take-Two Interactive",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "QNTXUSDT",
+        "description": "QNTX",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CRVUSDT",
+        "description": "CRV / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "MCDUSDT",
+        "description": "MCD",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "RIVNUSDT",
+        "description": "Rivian Automotive",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDTRY",
+        "description": "US Dollar / Turkish Lira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "ASMLUSDT",
+        "description": "ASML Holding",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DKNGUSDT",
+        "description": "DraftKings",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "HK0992USDT",
+        "description": "Lenovo Group (0992.HK)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "IWMUSDT",
+        "description": "iShares Russell 2000 ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PAYPUSDT",
+        "description": "PayPay",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SHIBUSDT",
+        "description": "SHIB / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "TERUSDT",
+        "description": "Teradyne",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "TWSTUSDT",
+        "description": "Twist Bioscience",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "UNHUSDT",
+        "description": "UNH",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "BABAUSDT",
+        "description": "Alibaba Group",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PENGUSDT",
+        "description": "Penguin Solutions",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SGDHKD",
+        "description": "Singapore Dollar vs Hong Kong Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "STXUSDT",
+        "description": "STX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "XPDUSDT",
+        "description": "Palladium",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "ACNUSDT",
+        "description": "ACN",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDJPY",
+        "description": "Australian Dollar vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AUDUSD",
+        "description": "Australian Dollar vs US Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CADCHF",
+        "description": "Canadian Dollar vs Swiss Franc",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CHFDKK",
+        "description": "Swiss Franc vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CHFSGD",
+        "description": "Swiss Franc vs Singapore Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURSAR_HKN",
+        "description": "EUR / SAR (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "HANMIUSDT",
+        "description": "Hanmi Semiconductor",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NOKDKK",
+        "description": "Norwegian Krona vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "NZDJPY",
+        "description": "New Zealand Dollar vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "SNOWUSDT",
+        "description": "Snowflake",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "VRTUSDT",
+        "description": "Vertiv",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XBIUSDT",
+        "description": "SPDR S&P Biotech ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ZHONGJIUSDT",
+        "description": "Zhongji Innolight",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CADPLN",
+        "description": "Canadian Dollar vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURCAD",
+        "description": "Euro vs Canadian Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDJPY",
+        "description": "US Dollar / Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDMYR",
+        "description": "US Dollar vs Malaysian Ringgit",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "1INCHUSDT",
+        "description": "1INCH / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDCAD",
+        "description": "Australian Dollar vs Canadian Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "BTCJPY",
+        "description": "Bitcoin vs Japanese Yen",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "CADTRY_HRM",
+        "description": "CAD / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "DKKPLN",
+        "description": "Danish Krona vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURUSD",
+        "description": "Euro / US Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPHUF",
+        "description": "Great Britain Pound vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPJPY",
+        "description": "Great Britain Pound vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "JPYTRY_HKN",
+        "description": "JPY / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "MRKUSDT",
+        "description": "Merck & Co.",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "MXNJPY",
+        "description": "Mexican Peso vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "PLNDKK",
+        "description": "Zloty vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "SKHYNIXUSDT",
+        "description": "SK hynix",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SKHYUSDT",
+        "description": "SK hynix (US)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SMHUSDT",
+        "description": "VanEck Semiconductor ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDCAD_HRM",
+        "description": "USD / CAD",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "USDKRW",
+        "description": "US Dollar vs South Korea Won",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "WIFUSDT",
+        "description": "WIF / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "XAGUSD",
+        "description": "Silver / US Dollar",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "DKKSGD",
+        "description": "Danish Krona vs Singapore Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURJPY",
+        "description": "Euro vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "JUPUSDT",
+        "description": "JUP / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "MDBUSDT",
+        "description": "MongoDB",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NOKSEK",
+        "description": "Norwegian Krona vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "PDDUSDT",
+        "description": "PDD Holdings",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "POLUSDT",
+        "description": "POL / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "USDPLN",
+        "description": "US Dollar vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AAPLUSDT",
+        "description": "Apple",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDSEK",
+        "description": "Australian Dollar vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CZKPLN",
+        "description": "Czech Koruna vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPSEK",
+        "description": "Great Britain Pound vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "INTCUSDT",
+        "description": "Intel",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDSEK",
+        "description": "New Zealand Dollar vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "STXXUSDT",
+        "description": "STXX",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDCZK",
+        "description": "US Dollar vs Czech Koruna",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "XPTUSDT",
+        "description": "Platinum",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "XZNUSD",
+        "description": "Zinc vs US Dollar",
+        "type": "Commodity",
+        "exchange": "OTC",
+        "source": "MT5"
+    },
+    {
+        "name": "ALGOUSDT",
+        "description": "ALGO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ARBUSDT",
+        "description": "ARB / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDHUF",
+        "description": "Australian Dollar vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "BTCXAG",
+        "description": "Bitcoin vs Silver",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "CRCLUSDT",
+        "description": "Circle Internet Group",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURGBP_HKN",
+        "description": "EUR / GBP (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "GBPCHF",
+        "description": "Great Britain Pound vs Swiss Franc",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "HK0700USDT",
+        "description": "Tencent Holdings (0700.HK)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "HK50",
+        "description": "Hong Kong 50 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "NKEUSDT",
+        "description": "NKE",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ONEUSDT",
+        "description": "ONE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SOLUSDT",
+        "description": "SOL / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "TRXUSDT",
+        "description": "TRX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "TSLAUSDT",
+        "description": "Tesla",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XAGAUD",
+        "description": "Silver vs Australian Dollar",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "AAOIUSDT",
+        "description": "Applied Optoelectronics",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDSGD",
+        "description": "Australian Dollar vs Singapore Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AUDZAR",
+        "description": "Australian Dollar vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AVGOUSDT",
+        "description": "Broadcom",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DKKJPY",
+        "description": "Danish Krona vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "FLNCUSDT",
+        "description": "Fluence Energy",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPTRY",
+        "description": "Great Britain Pound vs New Turkish Lira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPTRY_HRM",
+        "description": "GBP / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "GOOGLUSDT",
+        "description": "Alphabet (Google)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "TENCENTUSDT",
+        "description": "Tencent Holdings",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "UNITREEUSDT",
+        "description": "Unitree Robotics",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDMAD",
+        "description": "US Dollar vs Moroccan Dirham",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USOIL",
+        "description": "Crude Oil",
+        "type": "Commodity",
+        "exchange": "NYMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "API3USDT",
+        "description": "API3 / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDMXN",
+        "description": "Australian Dollar vs Mexican Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "BZUSDT",
+        "description": "Brent Crude Oil",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "CHFZAR",
+        "description": "Swiss Franc vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "COPPERUSDT",
+        "description": "Copper",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "CRWDUSDT",
+        "description": "CrowdStrike",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EWJUSDT",
+        "description": "iShares MSCI Japan ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EWZUSDT",
+        "description": "iShares MSCI Brazil ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GMXUSDT",
+        "description": "GMX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "HOODUSDT",
+        "description": "Robinhood Markets",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "MSFTUSDT",
+        "description": "Microsoft",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SHAZUSDT",
+        "description": "SharonAI Holdings",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDTHB",
+        "description": "US Dollar vs Thai Baht",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "WDCUSDT",
+        "description": "Western Digital",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ZECUSDT",
+        "description": "ZEC / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BWETUSDT",
+        "description": "BWET",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CADTRY",
+        "description": "Canadian Dollar vs New Turkish Lira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "HBARUSDT",
+        "description": "HBAR / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "HIMSUSDT",
+        "description": "Hims & Hers Health",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ICPUSDT",
+        "description": "ICP / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "NFLXUSDT",
+        "description": "Netflix",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NVDAUSDT",
+        "description": "NVIDIA",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDSGD",
+        "description": "New Zealand Dollar vs Singapore Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "TSMUSDT",
+        "description": "TSMC",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDNOK",
+        "description": "US Dollar vs Norwegian Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AUDTRY",
+        "description": "Australian Dollar vs New Turkish Lira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "DJTUSDT",
+        "description": "Trump Media & Technology Group",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EIGENUSDT",
+        "description": "EIGEN / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "LDOUSDT",
+        "description": "LDO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "PLTRUSDT",
+        "description": "Palantir Technologies",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XAUUSD_HRM",
+        "description": "Ons Altın / USD",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "ZMUSDT",
+        "description": "Zoom Communications",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CHFTRY",
+        "description": "Swiss Franc vs New Turkish Lira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "COINUSDT",
+        "description": "Coinbase",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CVNAUSDT",
+        "description": "Carvana",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DRAMUSDT",
+        "description": "Roundhill Memory ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ETHFIUSDT",
+        "description": "ETHFI / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "GALAUSDT",
+        "description": "GALA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPNZD",
+        "description": "Great Britain Pound vs New Zealand Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "KSTRUSDT",
+        "description": "KraneShares SSE STAR Market 50 ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDNOK",
+        "description": "New Zealand Dollar vs Norwegian Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "XAGJPY",
+        "description": "Silver vs Japanese Yen",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "AUDCHF",
+        "description": "Australian Dollar vs Swiss Franc",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AXSUSDT",
+        "description": "AXS / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "CHFNOK",
+        "description": "Swiss Franc vs Norwegian Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CHFPLN",
+        "description": "Swiss Franc vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "DELLUSDT",
+        "description": "Dell Technologies",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURCZK",
+        "description": "Euro vs Czech Koruna",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EWYUSDT",
+        "description": "iShares MSCI South Korea ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPPLN",
+        "description": "Great Britain Pound vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "HK1810USDT",
+        "description": "Xiaomi (1810.HK)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "HKDJPY",
+        "description": "Hong Kong Dollar vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "INJUSDT",
+        "description": "INJ / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "IRENUSDT",
+        "description": "IREN",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "JP225",
+        "description": "Japan 225 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "MRVLUSDT",
+        "description": "Marvell Technology",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDDKK",
+        "description": "New Zealand Dollar vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "RENDERUSDT",
+        "description": "RENDER / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "USDHUF",
+        "description": "US Dollar vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "XAGEUR",
+        "description": "Silver vs Euro",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "XAGUSDT",
+        "description": "Silver",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "XAUTUSDT",
+        "description": "XAUT / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "XCUUSD",
+        "description": "Copper vs US Dollar",
+        "type": "Commodity",
+        "exchange": "OTC",
+        "source": "MT5"
+    },
+    {
+        "name": "XPTUSD",
+        "description": "Platinum",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "ALTEUR_HKN",
+        "description": "ALT / EUR (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "ALTUSD_HKN",
+        "description": "ALT / USD (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "ARMUSDT",
+        "description": "Arm Holdings",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ATA25LU_HKN",
+        "description": "Ata 2.5'lu Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "ATABESLI_HKN",
+        "description": "Ata Beşli Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "ATACEYREK_HKN",
+        "description": "Ata Çeyrek Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "ATAYARIM_HKN",
+        "description": "Ata Yarım Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "AUDTRY_HKN",
+        "description": "AUD / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "AUDTRY_HRM",
+        "description": "AUD / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "AUDUSD_HRM",
+        "description": "AUD / USD",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "CEYREKALTIN_HKN",
+        "description": "Çeyrek Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "ETHUSD",
+        "description": "Ethereum / US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "EURCHF_HKN",
+        "description": "EUR / CHF (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "EURUSD_HKN",
+        "description": "EUR / USD (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "GREMSEALTIN_HKN",
+        "description": "Eski Gremse Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "HASTRY_HKN",
+        "description": "HAS / TRY (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "HK0625USDT",
+        "description": "SHEIN (0625.HK)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ONDSUSDT",
+        "description": "Ondas Holdings",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PLATINUSD_HRM",
+        "description": "Platin / USD",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "RESATBESLI_HKN",
+        "description": "Reşat Beşli Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "RESATLIRA_HKN",
+        "description": "Reşat Lira Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "SPCXUSDT",
+        "description": "SpaceX",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USARUSDT",
+        "description": "USA Rare Earth",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDJPY_HRM",
+        "description": "USD / JPY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "XAUEUR_HKN",
+        "description": "XAU / EUR (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "XAUUSD_HKN",
+        "description": "XAU / USD (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "XPTUSD_HRM",
+        "description": "Ons Platin / USD",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "YARIMALTIN_HKN",
+        "description": "Eski Yarım Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENIATA25LU_HKN",
+        "description": "Yeni Ata 2.5'lu Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENIATABESLI_HKN",
+        "description": "Yeni Ata Beşli Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENIATACEYREK_HKN",
+        "description": "Yeni Ata Çeyrek Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENIATAYARIM_HKN",
+        "description": "Yeni Ata Yarım Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENIATA_HKN",
+        "description": "Yeni Ata Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENICEYREKALTIN_HKN",
+        "description": "Yeni Çeyrek Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENIGREMSEALTIN_HKN",
+        "description": "Yeni Gremse Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENITAMALTIN_HKN",
+        "description": "Yeni Tam Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "YENIYARIMALTIN_HKN",
+        "description": "Yeni Yarım Altın (Kapalıçarşı)",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "ALTINTRY_HRM",
+        "description": "Has Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "AVAXUSDT",
+        "description": "AVAX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AYAR14TRY_HRM",
+        "description": "14 Ayar Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "AYAR22TRY_HRM",
+        "description": "22 Ayar Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "BNBUSDT",
+        "description": "BNB / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BSPUSDT",
+        "description": "BSP",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CHFJPY",
+        "description": "Swiss Franc vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CXMTUSDT",
+        "description": "ChangXin Memory Technologies",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DE30",
+        "description": "Germany 30 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURCHF",
+        "description": "Euro vs Swiss Franc",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURNZD",
+        "description": "Euro vs New Zealand Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURUSD_HRM",
+        "description": "EUR / USD",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "GBPUSD_HRM",
+        "description": "GBP / USD",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "GRTUSDT",
+        "description": "GRT / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "MSTRUSDT",
+        "description": "Strategy (MicroStrategy)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NOWUSDT",
+        "description": "ServiceNow",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PANWUSDT",
+        "description": "Palo Alto Networks",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PLNJPY",
+        "description": "Zloty vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USTEC",
+        "description": "US Tech 100 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "ANKRUSDT",
+        "description": "ANKR / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BEUSDT",
+        "description": "Bloom Energy",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DKKHUF",
+        "description": "Danish Krona vs Forint",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURGBP",
+        "description": "Euro vs Great Britain Pound",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "SEKDKK",
+        "description": "Swedish Krona vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "US500",
+        "description": "US SPX 500 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "US500_X100",
+        "description": "US SPX 500 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDILS",
+        "description": "US Dollar vs New Israeli Shekel",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "BONKUSDT",
+        "description": "BONK / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BTCAUD",
+        "description": "Bitcoin vs Australian Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "BTCCNH",
+        "description": "Bitcoin vs offshore Chinese Renminbi",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "CADMXN",
+        "description": "Canadian Dollar vs Mexican Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CAKEUSDT",
+        "description": "CAKE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "DISUSDT",
+        "description": "Walt Disney",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURJPY_HKN",
+        "description": "EUR / JPY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "GBPUSD_HKN",
+        "description": "GBP / USD (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "GTLBUSDT",
+        "description": "GitLab",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "LITEUSDT",
+        "description": "Lumentum",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "METAUSDT",
+        "description": "Meta Platforms",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "QCOMUSDT",
+        "description": "Qualcomm",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "QNTUSDT",
+        "description": "QNT / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ROSEUSDT",
+        "description": "ROSE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SAMSUNGUSDT",
+        "description": "Samsung Electronics",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SNXUSDT",
+        "description": "SNX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "USDEXUSDT",
+        "description": "USDEX",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDJPY_HKN",
+        "description": "USD / JPY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "USDZAR",
+        "description": "US Dollar vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "XNIUSD",
+        "description": "Nickel vs US Dollar",
+        "type": "Commodity",
+        "exchange": "OTC",
+        "source": "MT5"
+    },
+    {
+        "name": "ZHIPUUSDT",
+        "description": "Zhipu AI",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURNOK",
+        "description": "Euro vs Norwegian Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EWTUSDT",
+        "description": "iShares MSCI Taiwan ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "JPYTRY_HRM",
+        "description": "JPY / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "MBTUSD",
+        "description": "Micro Bitcoin vs US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "PYTHUSDT",
+        "description": "PYTH / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "RAYUSDT",
+        "description": "RAY / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "USDCHF_HRM",
+        "description": "USD / CHF",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "USDMXN",
+        "description": "US Dollar vs Mexican Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "ANETUSDT",
+        "description": "Arista Networks",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDUSD_HKN",
+        "description": "AUD / USD (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "BATUSDT",
+        "description": "BAT / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "CADTRY_HKN",
+        "description": "CAD / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "CRMUSDT",
+        "description": "Salesforce",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURAED_HKN",
+        "description": "EUR / AED (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "EURAUD_HKN",
+        "description": "EUR / AUD (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "EURQAR_HKN",
+        "description": "EUR / QAR (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "EURTRY_HKN",
+        "description": "EUR / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "GBPTRY_HKN",
+        "description": "GBP / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "LTCUSD",
+        "description": "Litecoin vs US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "UNIUSDT",
+        "description": "UNI / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "USDSGD_HKN",
+        "description": "USD / SGD (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "XRPUSD",
+        "description": "Ripple vs US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "ADAUSDT",
+        "description": "ADA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDCZK",
+        "description": "Australian Dollar vs Czech Koruna",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "ETHUSDT",
+        "description": "ETH / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPILS",
+        "description": "Great Britain Pound vs New Israeli Shekel",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "IONQUSDT",
+        "description": "IonQ",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "JASMYUSDT",
+        "description": "JASMY / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "LINKUSDT",
+        "description": "LINK / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "LTCUSDT",
+        "description": "LTC / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "NOKJPY",
+        "description": "Norwegian Krona vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "NZDPLN",
+        "description": "New Zealand Dollar vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "OPUSDT",
+        "description": "OP / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "UBERUSDT",
+        "description": "Uber Technologies",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XAUAUD",
+        "description": "Gold vs Australian Dollar",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "XAUEUR",
+        "description": "Gold vs Euro",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "CELOUSDT",
+        "description": "CELO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "DASHUSDT",
+        "description": "DASH / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "DDOGUSDT",
+        "description": "Datadog",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURHKD",
+        "description": "Euro vs Hong Kong Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPAUD",
+        "description": "Great Britain Pound vs Australian Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPCAD",
+        "description": "Great Britain Pound vs Canadian Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPDKK",
+        "description": "Great Britain Pound vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GUMUSTRY_HRM",
+        "description": "Gümüş / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "LGELECTRONICSUSDT",
+        "description": "LG Electronics",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDZAR",
+        "description": "New Zealand Dollar vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "PAXGUSDT",
+        "description": "PAXG / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "QQQUSDT",
+        "description": "Invesco QQQ Trust (Nasdaq 100)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "RUNEUSDT",
+        "description": "RUNE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SOFIUSDT",
+        "description": "SoFi Technologies",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "TRYJPY",
+        "description": "New Turkish Lira vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AGPUUSDT",
+        "description": "Axe Compute",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AMATUSDT",
+        "description": "Applied Materials",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AMDUSDT",
+        "description": "Advanced Micro Devices",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ATA5ESKI_HRM",
+        "description": "Eski Ata5 Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "ATA5YENI_HRM",
+        "description": "Yeni Ata5 Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "ATAESKI_HRM",
+        "description": "Eski Ata Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "ATAYENI_HRM",
+        "description": "Yeni Ata Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "BCHUSD",
+        "description": "Bitcoin Cash vs US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "BYDUSDT",
+        "description": "BYD Company",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CEYREKESKI_HRM",
+        "description": "Eski Çeyrek Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "CEYREKYENI_HRM",
+        "description": "Yeni Çeyrek Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "CRWVUSDT",
+        "description": "CoreWeave",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DOGEUSDT",
+        "description": "DOGE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "EURAUD",
+        "description": "Euro vs Australian Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GRAMALTINTRY_HRM",
+        "description": "Gram Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "GREMSEESKI_HRM",
+        "description": "Eski Gremse Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "GREMSEYENI_HRM",
+        "description": "Yeni Gremse Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "JPMUSDT",
+        "description": "JPMorgan Chase",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SPYUSDT",
+        "description": "SPDR S&P 500 ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "TAMESKI_HRM",
+        "description": "Eski Tam Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "TAMYENI_HRM",
+        "description": "Yeni Tam Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "TIAUSDT",
+        "description": "TIA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "UK100",
+        "description": "UK 100 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDCHF_HKN",
+        "description": "USD / CHF (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "VSTUSDT",
+        "description": "Vistra",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "XRPUSDT",
+        "description": "XRP / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "YARIMESKI_HRM",
+        "description": "Eski Yarım Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "YARIMYENI_HRM",
+        "description": "Yeni Yarım Altın / TRY",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "ZILUSDT",
+        "description": "ZIL / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BTCXAU",
+        "description": "Bitcoin vs Gold",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "CBRSUSDT",
+        "description": "Cerebras Systems",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DYDXUSDT",
+        "description": "DYDX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ENSUSDT",
+        "description": "ENS / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "FLOWUSDT",
+        "description": "FLOW / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPNOK",
+        "description": "Great Britain Pound vs Norwegian Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "IMXUSDT",
+        "description": "IMX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SECZUSDT",
+        "description": "SECZ",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SHOPUSDT",
+        "description": "Shopify",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "TAOUSDT",
+        "description": "TAO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "THETAUSDT",
+        "description": "THETA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "XAGGBP",
+        "description": "Silver vs Great Britain Pound",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "YFIUSDT",
+        "description": "YFI / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ADBEUSDT",
+        "description": "Adobe",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AMZNUSDT",
+        "description": "Amazon",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "BNCUSDT",
+        "description": "CEA Industries",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CHFTRY_HKN",
+        "description": "CHF / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "GUMUSUSD_HRM",
+        "description": "Gümüş / USD",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "KAIAUSDT",
+        "description": "KAIA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "KSMUSDT",
+        "description": "KSM / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "MINIMAXUSDT",
+        "description": "MiniMax",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PENDLEUSDT",
+        "description": "PENDLE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "XAGUSD_HRM",
+        "description": "Ons Gümüş / USD",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "APTUSDT",
+        "description": "APT / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AXTIUSDT",
+        "description": "AXT Inc",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "BRKBUSDT",
+        "description": "Berkshire Hathaway (Class B)",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CADNOK",
+        "description": "Canadian Dollar vs Norwegian Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CLUSDT",
+        "description": "WTI Crude Oil",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "DOTUSDT",
+        "description": "DOT / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "EURTRY",
+        "description": "Euro vs New Turkish Lira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "FLEXUSDT",
+        "description": "Flex",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GLWUSDT",
+        "description": "Corning",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "KAVAUSDT",
+        "description": "KAVA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "RKLBUSDT",
+        "description": "Rocket Lab",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SEKPLN",
+        "description": "Swedish Krona vs Romanian Leu New",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "SGDJPY",
+        "description": "Singapore Dollar vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "SNDKUSDT",
+        "description": "SanDisk",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "US30",
+        "description": "US Wall Street 30 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "US30_X10",
+        "description": "US Wall Street 30 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "AAVEUSDT",
+        "description": "AAVE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ARUSDT",
+        "description": "AR / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDPLN",
+        "description": "Australian Dollar vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "AUS200",
+        "description": "Australia S&P ASX 200 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "BTCZAR",
+        "description": "Bitcoin vs South African Rand",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "CHZUSDT",
+        "description": "CHZ / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "EURSGD",
+        "description": "Euro vs Singapore Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "FETUSDT",
+        "description": "FET / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "HYPEUSDT",
+        "description": "HYPE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "KODEX200USDT",
+        "description": "KODEX 200 ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDCAD",
+        "description": "New Zealand Dollar vs Canadian Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "NZDCHF",
+        "description": "New Zealand Dollar vs Swiss Franc",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "NZDTRY",
+        "description": "New Zealand Dollar vs New Turkish Lira",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "ONDOUSDT",
+        "description": "ONDO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SUIUSDT",
+        "description": "SUI / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "UKOIL",
+        "description": "Crude Oil Brent",
+        "type": "Commodity",
+        "exchange": "NYMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "AUDNZD",
+        "description": "Australian Dollar vs New Zealand Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "CATUSDT",
+        "description": "Caterpillar",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CRDOUSDT",
+        "description": "Credo Technology",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "DXY",
+        "description": "US Dollar Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "JTOUSDT",
+        "description": "JTO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "NBISUSDT",
+        "description": "Nebius Group",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ORCLUSDT",
+        "description": "Oracle",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SANDUSDT",
+        "description": "SAND / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SUSDT",
+        "description": "S / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "USDTWD",
+        "description": "US Dollar vs New Taiwan Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USTEC_X100",
+        "description": "US Tech 100 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "XLMUSDT",
+        "description": "XLM / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BCHUSDT",
+        "description": "BCH / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "CHFMXN",
+        "description": "Swiss Franc vs Mexican Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "COMPUSDT",
+        "description": "COMP / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ENAUSDT",
+        "description": "ENA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "EURPLN",
+        "description": "Euro vs Zloty",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "FILUSDT",
+        "description": "FIL / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPUSD",
+        "description": "British Pound / US Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "IOTAUSDT",
+        "description": "IOTA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "MRNAUSDT",
+        "description": "Moderna",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NVOUSDT",
+        "description": "Novo Nordisk",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDSGD",
+        "description": "US Dollar vs Singapore Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "ALABUSDT",
+        "description": "Astera Labs",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDDKK",
+        "description": "Australian Dollar vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "BTCUSDT",
+        "description": "BTC / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "DKKZAR",
+        "description": "Danish Krona vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURMXN",
+        "description": "Euro vs Mexican Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURSEK",
+        "description": "Euro vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GDXUSDT",
+        "description": "VanEck Gold Miners ETF",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "MANAUSDT",
+        "description": "MANA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "NOKUSDT",
+        "description": "Nokia",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "PLNSEK",
+        "description": "Zloty vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDHKD",
+        "description": "US Dollar vs Hong Kong Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "WLDUSDT",
+        "description": "WLD / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "WUSDT",
+        "description": "W / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "XAUUSD",
+        "description": "Gold / US Dollar",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "APPUSDT",
+        "description": "AppLovin",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "AUDNOK",
+        "description": "Australian Dollar vs Norwegian Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "BNBUSD",
+        "description": "BNB Token vs US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "CHFTRY_HRM",
+        "description": "CHF / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "CIENUSDT",
+        "description": "Ciena",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ETCUSDT",
+        "description": "ETC / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "FR40",
+        "description": "France 40 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "FWDIUSDT",
+        "description": "Forward Industries",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "GBPMXN",
+        "description": "Great Britain Pound vs Mexican Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "MUUSDT",
+        "description": "Micron Technology",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NEARUSDT",
+        "description": "NEAR / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "PEPEUSDT",
+        "description": "PEPE / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "STOXX50",
+        "description": "EU Stocks 50 Index",
+        "type": "Index",
+        "exchange": "INDEX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDCNH",
+        "description": "US Dollar vs offshore Chinese Renminbi",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDDKK",
+        "description": "US Dollar vs Danish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDRON",
+        "description": "US Dollar vs Romanian Leu New",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "ATOMUSDT",
+        "description": "ATOM / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BTCTHB",
+        "description": "Bitcoin vs Thai Baht",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "COHRUSDT",
+        "description": "Coherent",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "EURZAR",
+        "description": "Euro vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GBPZAR",
+        "description": "Great Britain Pound vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "GMEUSDT",
+        "description": "GameStop",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "HUTUSDT",
+        "description": "Hut 8",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "MINAUSDT",
+        "description": "MINA / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "NEOUSDT",
+        "description": "NEO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SEIUSDT",
+        "description": "SEI / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "SOLUSD",
+        "description": "Solana Token vs US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "SUSHIUSDT",
+        "description": "SUSHI / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "TRYZAR",
+        "description": "New Turkish Lira vs South African Rand",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "TXNUSDT",
+        "description": "Texas Instruments",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "USDCAD",
+        "description": "US Dollar vs Canadian Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDCHF",
+        "description": "US Dollar vs Swiss Franc",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "USDSEK",
+        "description": "US Dollar vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "ZKUSDT",
+        "description": "ZK / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ZROUSDT",
+        "description": "ZRO / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "ZRXUSDT",
+        "description": "ZRX / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "BBXUSDT",
+        "description": "BBX",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "CADJPY",
+        "description": "Canadian Dollar vs Japanese Yen",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EGLDUSDT",
+        "description": "EGLD / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "NATGASUSDT",
+        "description": "Natural Gas",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "STRKUSDT",
+        "description": "STRK / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "USDTRY_HKN",
+        "description": "USD / TRY (Kapalıçarşı)",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "hakandoviz"
+    },
+    {
+        "name": "XALUSD",
+        "description": "Aluminum vs US Dollar",
+        "type": "Commodity",
+        "exchange": "OTC",
+        "source": "MT5"
+    },
+    {
+        "name": "XAUUSDT",
+        "description": "Gold",
+        "type": "Commodity",
+        "exchange": "commodities",
+        "source": "aggr"
+    },
+    {
+        "name": "XPDUSD",
+        "description": "Palladium",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "XTZUSDT",
+        "description": "XTZ / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "AMCUSDT",
+        "description": "AMC Entertainment",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "ASTSUSDT",
+        "description": "AST SpaceMobile",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "BMNRUSDT",
+        "description": "BitMine Immersion Technologies",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "BTCUSD",
+        "description": "Bitcoin / US Dollar",
+        "type": "Crypto",
+        "exchange": "CRYPTO",
+        "source": "MT5"
+    },
+    {
+        "name": "CHFSEK",
+        "description": "Swiss Franc vs Swedish Krona",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "EURTRY_HRM",
+        "description": "EUR / TRY",
+        "type": "Forex",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "GBPSGD",
+        "description": "Great Britain Pound vs Singapore Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "HYUNDAIUSDT",
+        "description": "Hyundai Motor",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "KLACUSDT",
+        "description": "KLA Corporation",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "NZDMXN",
+        "description": "New Zealand Dollar vs Mexican Peso",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "NZDUSD",
+        "description": "New Zealand Dollar vs US Dollar",
+        "type": "Forex",
+        "exchange": "FOREX",
+        "source": "MT5"
+    },
+    {
+        "name": "PALADYUMUSD_HRM",
+        "description": "Paladyum / USD",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    },
+    {
+        "name": "RDDTUSDT",
+        "description": "Reddit",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "SMCIUSDT",
+        "description": "Super Micro Computer",
+        "type": "Stock",
+        "exchange": "stocks",
+        "source": "aggr"
+    },
+    {
+        "name": "VETUSDT",
+        "description": "VET / USDT",
+        "type": "Crypto",
+        "exchange": "crypto",
+        "source": "aggr"
+    },
+    {
+        "name": "XAUGBP",
+        "description": "Gold vs Great Britain Pound",
+        "type": "Commodity",
+        "exchange": "COMEX",
+        "source": "MT5"
+    },
+    {
+        "name": "XPDUSD_HRM",
+        "description": "Ons Paladyum / USD",
+        "type": "Commodity",
+        "exchange": "kapalicarsi",
+        "source": "haremaltin"
+    }
+]

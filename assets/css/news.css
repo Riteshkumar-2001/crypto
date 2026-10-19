@@ -1,0 +1,115 @@
+/* ── Hero ─────────────────────────────────── */
+.hero-section {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%);
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid #21262d;
+}
+
+.search-box {
+  max-width: 600px;
+}
+
+.search-box .form-control,
+.search-box .input-group-text {
+  background: #161b22 !important;
+  border-color: #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.search-box .form-control::placeholder {
+  color: #8b949e !important;
+}
+
+.search-box .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.3);
+}
+
+/* ── Story Cards ─────────────────────────── */
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+.story-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.story-card:hover {
+  border-color: #388be3;
+  box-shadow: 0 4px 20px rgba(56, 139, 253, 0.12);
+  transform: translateY(-2px);
+}
+
+.story-rank {
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.story-title a {
+  color: #e6edf3;
+  text-decoration: none;
+}
+
+.story-title a:hover {
+  color: #58a6ff;
+  text-decoration: underline;
+}
+
+.story-desc {
+  font-size: 0.82rem;
+  color: #8b949e;
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+.story-meta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: #8b949e;
+}
+
+.story-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.story-meta .bi {
+  font-size: 0.85rem;
+}
+
+/* ── Utility ─────────────────────────────── */
+.text-muted a {
+  color: #58a6ff;
+  text-decoration: none;
+}

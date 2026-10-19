@@ -1,0 +1,572 @@
+/* ═══════════════════════════════════════════════════════
+   positions.css — load after app.css and header.css
+   Uses the shared tokens from app.css.
+   ═══════════════════════════════════════════════════════ */
+
+/* P&L colours: every naming style in use, so any script class works */
+.pnl-positive, .pnl-up,   .profit { color: var(--green) !important; }
+.pnl-negative, .pnl-down, .loss   { color: var(--red)   !important; }
+
+/* ── Live ticker cards (compact) ─────────── */
+.price-card .big-price {
+  margin-top: .1rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+}
+
+/* ── Account summary ─────────────────────── */
+.stat-card {
+  height: 100%;
+  padding: .75rem .95rem;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  margin-top: .2rem;
+  color: var(--text-strong);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.stat-sub {
+  margin-top: .15rem;
+  color: var(--muted);
+  font-size: .7rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-sub span { color: var(--text); font-weight: 500; }
+
+/* ── Card toolbars (positions + new position) ── */
+.positions-card,
+.new-pos-card { padding: 0; }
+
+.positions-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  padding: .65rem 1rem;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--bg-raise);
+}
+
+.positions-toolbar h2,
+.new-pos-card h2,
+.pnl-card h2 {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0;
+  color: var(--text-strong);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.positions-toolbar h2 i,
+.pnl-card h2 i { color: var(--muted); }
+.new-pos-card h2 i { color: var(--green); }
+
+.pnl-card h2 { margin-bottom: .75rem; }
+
+.count-pill {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-hi);
+  color: var(--text);
+  font-size: .64rem;
+  font-weight: 700;
+}
+
+.positions-actions {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn-outline-danger {
+  --bs-btn-color: var(--red);
+  --bs-btn-border-color: rgba(255, 92, 108, .4);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--red);
+  --bs-btn-hover-border-color: var(--red);
+  --bs-btn-disabled-color: var(--muted);
+  --bs-btn-disabled-border-color: var(--input-border);
+  --bs-btn-font-size: .75rem;
+  --bs-btn-padding-y: .25rem;
+  --bs-btn-padding-x: .7rem;
+}
+
+/* ── Positions list (div grid) ───────────── */
+.positions-list-container {
+  --pos-cols: minmax(95px, 1.1fr) 64px 56px minmax(78px, 1fr) minmax(78px, 1fr) minmax(88px, 1.1fr) minmax(72px, .9fr) minmax(250px, 2fr) 96px 72px;
+  display: flex;
+  flex-direction: column;
+  min-width: 1100px; /* scrolls sideways on small screens */
+}
+
+.list-header,
+.list-row {
+  display: grid;
+  grid-template-columns: var(--pos-cols);
+  align-items: center;
+  column-gap: .5rem;
+  padding: .55rem 1rem;
+}
+
+.list-header {
+  border-bottom: 1px solid var(--card-border);
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.list-row {
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text);
+  font-size: .82rem;
+  transition: background-color .12s ease;
+}
+
+.list-row:last-child { border-bottom: 0; }
+.list-row:hover { background: rgba(255, 255, 255, .03); color: var(--text-strong); }
+
+.list-col {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-col.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.pos-sym { color: var(--text-strong); font-weight: 700; letter-spacing: .02em; }
+
+.list-row .btn {
+  --bs-btn-padding-y: .15rem;
+  --bs-btn-padding-x: .55rem;
+  --bs-btn-font-size: .7rem;
+}
+
+/* Side badges (buy / sell, with long / short aliases) */
+.side-badge {
+  display: inline-block;
+  padding: .2rem .5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.side-badge.buy,
+.side-badge.long {
+  color: var(--green);
+  background: rgba(46, 204, 143, .12);
+  border-color: rgba(46, 204, 143, .3);
+}
+
+.side-badge.sell,
+.side-badge.short {
+  color: var(--red);
+  background: rgba(255, 92, 108, .12);
+  border-color: rgba(255, 92, 108, .3);
+}
+
+/* ── Empty state ─────────────────────────── */
+.list-row-empty {
+  padding: 2.25rem 1rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty-row i {
+  display: block;
+  margin-bottom: .4rem;
+  color: var(--card-border-hi);
+  font-size: 1.8rem;
+}
+
+.empty-title { color: var(--text); font-size: .85rem; font-weight: 600; }
+.empty-sub   { margin-top: .15rem; font-size: .74rem; }
+
+/* ── New position form ───────────────────── */
+.new-pos-form { padding: 1rem; }
+
+.new-pos-form .form-label {
+  margin-bottom: .25rem;
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.new-pos-form .form-control,
+.new-pos-form .form-select {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  color: var(--text-strong);
+  font-size: .85rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.new-pos-form .form-control::placeholder { color: var(--muted); opacity: .8; }
+
+.new-pos-form .form-control:focus,
+.new-pos-form .form-select:focus {
+  background-color: var(--input-bg);
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(46, 204, 143, .15);
+  color: var(--text-strong);
+}
+
+.new-pos-form .form-control:disabled {
+  background-color: var(--bg-raise);
+  border-style: dashed;
+  color: var(--muted);
+  opacity: 1;
+}
+
+.new-pos-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.lot-calc {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .35rem .75rem;
+  background: var(--bg-raise);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  font-size: .75rem;
+}
+
+.lot-calc .label {
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.lot-calc .value {
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.submit-actions .btn {
+  min-width: 7rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: .8rem;
+  letter-spacing: .1em;
+}
+
+.new-pos-card .btn-success {
+  --bs-btn-bg: var(--green);
+  --bs-btn-border-color: var(--green);
+  --bs-btn-color: #04130c;
+  --bs-btn-hover-bg: #27b87f;
+  --bs-btn-hover-border-color: #27b87f;
+  --bs-btn-hover-color: #04130c;
+  --bs-btn-active-bg: #22a673;
+  --bs-btn-active-border-color: #22a673;
+  --bs-btn-active-color: #04130c;
+}
+
+.new-pos-card .btn-danger {
+  --bs-btn-bg: var(--red);
+  --bs-btn-border-color: var(--red);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: #f04758;
+  --bs-btn-hover-border-color: #f04758;
+  --bs-btn-active-bg: #dc3a4b;
+  --bs-btn-active-border-color: #dc3a4b;
+}
+
+/* Side toggle (kept for scripts that use it) */
+.side-toggle {
+  display: flex;
+  overflow: hidden;
+  background: var(--bg-raise);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+}
+
+.side-btn {
+  flex: 1;
+  padding: .6rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.side-btn.buy-active  { background: var(--green); color: #04130c; }
+.side-btn.sell-active { background: var(--red);   color: #fff; }
+.side-btn:hover:not(.buy-active):not(.sell-active) { background: rgba(255, 255, 255, .05); }
+
+/* ── P&L summary ─────────────────────────── */
+.pnl-stat {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding: .65rem .9rem;
+  background: var(--bg-raise);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--card-border-hi);
+  border-radius: var(--radius-md);
+}
+
+.pnl-stat:has(.profit) { border-left-color: var(--green); }
+.pnl-stat:has(.loss)   { border-left-color: var(--red); }
+
+.pnl-label {
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.pnl-value {
+  color: var(--text-strong);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ── Live ticker card (legacy class) ─────── */
+.live-ticker-card {
+  padding: 1rem 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  transition: border-color .15s ease;
+}
+.live-ticker-card:hover { border-color: var(--card-border-hi); }
+
+/* ── Confirm modal ───────────────────────── */
+#close-modal {
+  --bs-modal-bg: var(--card-bg);
+  --bs-modal-border-color: var(--card-border-hi);
+  --bs-modal-header-border-color: var(--card-border);
+  --bs-modal-footer-border-color: var(--card-border);
+  --bs-modal-color: var(--text);
+  font-size: .85rem;
+}
+
+/* ── Edit TP/SL button ── */
+.btn-tpsl-edit {
+  --bs-btn-color: var(--muted);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: var(--accent-gold);
+  --bs-btn-hover-bg: rgba(232, 185, 49, .12);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-padding-y: .1rem;
+  --bs-btn-padding-x: .25rem;
+  --bs-btn-font-size: .65rem;
+  padding: 0 !important;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: all .15s ease;
+}
+
+.btn-tpsl-edit:hover {
+  --bs-btn-color: var(--accent-gold);
+  background: rgba(232, 185, 49, .15);
+}
+
+.btn-tpsl-edit i {
+  font-size: .7rem;
+  margin: 0;
+}
+
+/* ── Edit modal styling ── */
+#edit-tpsl-modal .modal-body {
+  padding: 1rem;
+}
+
+#edit-tpsl-modal .form-control {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  color: var(--text-strong);
+  font-size: .85rem;
+  padding: .5rem .75rem;
+}
+
+#edit-tpsl-modal .form-control:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(46, 204, 143, .15);
+}
+
+#edit-tpsl-modal .form-label {
+  margin-bottom: .25rem;
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ── SL / TP column (8th) ─────────────────
+   Holds the "SL … TP …" text and the edit (gear) button.
+   .list-col clips overflow, which cut the gear off, so this column
+   is a non-wrapping flex row with visible overflow. */
+.list-header > :nth-child(8),
+.list-row > :nth-child(8) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .35rem .6rem;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.list-row > :nth-child(8) { font-size: .78rem; }
+
+.list-row > :nth-child(8) .btn-tpsl-edit {
+  flex: none;          /* never squashed or clipped */
+  margin-left: .1rem;
+}
+
+/* Breathing room between SL / TP and Opened */
+.list-header > :nth-child(9),
+.list-row > :nth-child(9) { padding-left: .9rem; }
+
+/* Optional markup: <span class="sltp"><span class="sl">…</span><span class="tp">…</span></span> */
+.sltp { display: inline-flex; align-items: center; gap: .6rem; }
+.sltp .sl { color: var(--red); }
+.sltp .tp { color: var(--green); }
+
+/* ═══════════════════════════════════════════════════════
+   NOTIFICATION BAR — bottom-right toast
+   ═══════════════════════════════════════════════════════ */
+.notification-bar {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  min-width: 280px;
+  max-width: 360px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-hi);
+  border-radius: var(--radius-lg);
+  padding: .85rem 1rem .85rem .85rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255,255,255,.04);
+  animation: notifSlideIn .3s ease-out;
+  font-size: .82rem;
+  border-left: 4px solid var(--muted);
+}
+
+.notification-bar.success { border-left-color: var(--green); }
+.notification-bar.danger { border-left-color: var(--red); }
+
+@keyframes notifSlideIn {
+  from { opacity: 0; transform: translateY(20px) scale(.96); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);   }
+}
+
+@keyframes notifSlideOut {
+  from { opacity: 1; transform: translateY(0)   scale(1);   }
+  to   { opacity: 0; transform: translateY(20px) scale(.96); }
+}
+
+.notification-bar.slide-out { animation: notifSlideOut .25s ease-in forwards; }
+
+.notification-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.notification-bar.success .notification-icon { background: rgba(34, 197, 94, .14); color: var(--green); }
+.notification-bar.danger .notification-icon { background: rgba(239, 68, 68, .14); color: var(--red); }
+
+.notification-content { flex: 1; min-width: 0; }
+.notification-title { font-weight: 600; color: var(--text-strong); font-size: .85rem; margin-bottom: .2rem; }
+.notification-body { color: var(--muted); font-size: .75rem; line-height: 1.45; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.notification-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: .2rem;
+  border-radius: 4px;
+  transition: color .15s, background .15s;
+  margin-top: -2px;
+}
+.notification-close:hover { color: var(--text-strong); background: rgba(255, 255, 255, .08); }
+
+@media (max-width: 576px) {
+  .notification-bar { right: .75rem; left: .75rem; max-width: none; }
+}
+
+/* ── Small screens ───────────────────────── */
+@media (max-width: 767.98px) {
+  .positions-toolbar { padding: .6rem .75rem; }
+
+  .positions-actions { width: 100%; justify-content: space-between; }
+
+  .new-pos-form { padding: .75rem; }
+
+  .new-pos-footer { flex-direction: column; align-items: stretch !important; }
+
+  .lot-calc { width: 100%; justify-content: center; }
+
+  .submit-actions { width: 100%; }
+
+  .submit-actions .btn {
+    flex: 1;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+  }
+}

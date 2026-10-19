@@ -1,0 +1,7 @@
+Gold (XAUUSD): 
+https://biquote.io/api/XAUUSD 
+
+Check available symbols: 
+https://biquote.io/api/active 
+
+WebSocket / SignalR: https://biquote.io/hubs/tick

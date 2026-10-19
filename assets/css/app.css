@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ── Tokens ─────────────────────────────── */
+:root {
+  --bg: #080b10;
+  --bg-raise: #0c1118;
+  --card-bg: #0f151e;
+  --card-border: #1c2533;
+  --card-border-hi: #2a384c;
+  --text: #c9d1de;
+  --text-strong: #f5f8fc;
+  --muted: #7a879c;
+  --accent-gold: #e8b931;
+  --accent-btc: #f7931a;
+  --green: #2ecc8f;
+  --red: #ff5c6c;
+  --amber: #f5a524;
+  --blue: #6cb2ff;
+  --input-bg: #0b1017;
+  --input-border: #263245;
+
+  --radius-lg: 8px;
+  --radius-md: 5px;
+  --radius-sm: 3px;
+
+  --font: "Montserrat", system-ui, sans-serif;
+}
+
+/* ── Base ───────────────────────────────── */
+html { color-scheme: dark; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::selection { background: rgba(46, 204, 143, .3); color: #fff; }
+
+/* ── Top note strip ─────────────────────── */
+.paper-strip { background: var(--bg-raise); }
+
+.paper-note {
+  margin: 0;
+  font-size: .72rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.bitquote {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 1px 11px;
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--radius-sm);
+  color: var(--text-strong);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: background-color .15s ease;
+}
+.bitquote:hover { background: rgba(232, 185, 49, .12); color: var(--text-strong); }
+
+/* ── Header ─────────────────────────────── */
+.trading-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8, 11, 16, .9);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  backdrop-filter: blur(14px) saturate(1.3);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.trading-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .15rem 1rem;
+}
+
+.trading-header h1 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--text-strong);
+  white-space: nowrap;
+}
+
+.trading-header h1 i { color: var(--green); font-size: .95rem; }
+
+/* ── Connection badge ───────────────────── */
+/* app.js replaces this element's className ("conn-badge live"), which drops
+   Bootstrap's .badge/.rounded-pill, so everything needed lives here. */
+.conn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-left: .25rem;
+  padding: .22rem .6rem .22rem .5rem;
+  border-radius: 999px;
+  border: 1px solid var(--input-border);
+  background: var(--bg-raise);
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  line-height: 1;
+}
+
+.conn-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.conn-badge.live {
+  color: var(--green);
+  background: rgba(46, 204, 143, .1);
+  border-color: rgba(46, 204, 143, .35);
+}
+.conn-badge.live::before { animation: live-pulse 2s ease-out infinite; }
+
+.conn-badge.reconnecting {
+  color: var(--amber);
+  background: rgba(245, 165, 36, .1);
+  border-color: rgba(245, 165, 36, .35);
+}
+
+.conn-badge.down {
+  color: var(--red);
+  background: rgba(255, 92, 108, .1);
+  border-color: rgba(255, 92, 108, .35);
+}
+
+@keyframes live-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(46, 204, 143, .6); }
+  70%  { box-shadow: 0 0 0 6px rgba(46, 204, 143, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 204, 143, 0); }
+}
+
+/* ── Cards ──────────────────────────────── */
+.trading-card {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .025), transparent 45%),
+    var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: .85rem 1rem .8rem;
+  overflow: hidden;
+}
+
+/* ── Instrument panel: price card + chart card joined ── */
+.instrument {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.instrument > .price-card {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.instrument > .chart-card {
+  flex: 1;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.instrument > .chart-card .chart-header { border-top: 1px solid var(--card-border); }
+
+/* Price cards: instrument-coloured top edge, container-aware grid */
+.price-card {
+  --accent: var(--green);
+  container-type: inline-size;
+  border-top: 2px solid var(--accent);
+}
+.price-card:has(#mid-BTCUSDT),
+.price-card:has(#mid-BTCUSD)  { --accent: var(--accent-btc); }
+.price-card:has(#mid-XAUUSD)  { --accent: var(--accent-gold); }
+
+/* ── Card heading ───────────────────────── */
+.trading-card h2 {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 0 0 .5rem;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.trading-card h2 .sym-code {
+  color: var(--accent, var(--text-strong));
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.trading-card h2 .sym-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-gold,
+.icon-btc {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: .85rem;
+}
+.icon-gold { color: var(--accent-gold); background: rgba(232, 185, 49, .12); }
+.icon-btc  { color: var(--accent-btc);  background: rgba(247, 147, 26, .12); }
+
+/* Market state pill (app.js sets: "state-line text-success | text-muted") */
+.price-card h2 .state-line {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-left: auto;
+  padding: .12rem .6rem .12rem .5rem;
+  border-radius: 999px;
+  background: var(--bg-raise);
+  border: 1px solid var(--card-border);
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+
+.state-line::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.state-line.text-success::before { animation: live-pulse 2s ease-out infinite; }
+
+/* ── Price ──────────────────────────────── */
+.big-price {
+  font-size: clamp(2rem, 3.8vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  color: var(--text-strong);
+  transition: color .5s ease;
+}
+
+/* Optional tick flash: toggle .tick-up / .tick-down from JS */
+.big-price.tick-up   { color: var(--green); transition: none; }
+.big-price.tick-down { color: var(--red);   transition: none; }
+
+/* ── Stats: 4 × 2 data grid with hairline cells ── */
+.kv-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: .85rem !important;
+  background: var(--card-border);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.kv {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  min-width: 0;
+  padding: .5rem .7rem;
+  background: var(--card-bg);
+  font-size: .8rem;
+}
+
+.kv .k {
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.kv .v {
+  color: var(--text-strong);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* app.js sets text-success / text-danger / text-muted on these */
+.kv .v.text-success, .state-line.text-success { color: var(--green) !important; }
+.kv .v.text-danger,  .state-line.text-danger  { color: var(--red)   !important; }
+.kv .v.text-muted,   .state-line.text-muted   { color: var(--muted) !important; }
+
+.kv .v[id^="chg-"].text-success::before,
+.kv .v[id^="chg-"].text-danger::before {
+  margin-right: .3em;
+  font-size: .65em;
+  vertical-align: .1em;
+}
+.kv .v[id^="chg-"].text-success::before { content: "▲"; }
+.kv .v[id^="chg-"].text-danger::before  { content: "▼"; }
+
+@container (max-width: 420px) {
+  .kv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ── Charts ─────────────────────────────── */
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.chart-header {
+  gap: .75rem;
+  margin-bottom: 0 !important;
+  padding: .5rem .75rem;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--bg-raise);
+  color: var(--text);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.chart-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-width: 0;
+}
+
+/* instrument colours for the title icons */
+.chart-header .text-warning { color: var(--accent-btc)  !important; }
+.chart-header .text-info    { color: var(--accent-gold) !important; }
+
+.chart-header .btn-group .btn {
+  --bs-btn-color: var(--muted);
+  --bs-btn-border-color: var(--input-border);
+  --bs-btn-hover-color: var(--text-strong);
+  --bs-btn-hover-bg: rgba(255, 255, 255, .06);
+  --bs-btn-hover-border-color: var(--card-border-hi);
+  --bs-btn-active-bg: rgba(46, 204, 143, .12);
+  --bs-btn-active-border-color: rgba(46, 204, 143, .45);
+  --bs-btn-padding-y: .2rem;
+  --bs-btn-padding-x: .55rem;
+  --bs-btn-font-size: .75rem;
+}
+
+.tv-chart {
+  width: 100%;
+  height: clamp(260px, 40vh, 380px);
+}
+
+/* ── Economic calendar ──────────────────── */
+.calendar-head {
+  gap: .5rem 1rem;
+  padding: .6rem 1rem;
+  background: var(--bg-raise);
+  --bs-border-color: var(--card-border);
+}
+
+.calendar-title {
+  color: var(--text-strong);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.calendar-card .text-primary { color: var(--blue) !important; }
+
+.calendar-pills { margin: 0; }
+
+.calendar-pills .nav-link {
+  padding: .22rem .7rem;
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.calendar-pills .nav-link:hover {
+  color: var(--text-strong);
+  background: rgba(255, 255, 255, .05);
+}
+
+.calendar-pills .nav-link.active {
+  color: var(--text-strong);
+  background: rgba(46, 204, 143, .12);
+  border-color: rgba(46, 204, 143, .45);
+}
+
+/* Table: sticky header, scrolls inside the card */
+.calendar-card .table-responsive {
+  max-height: 360px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border-hi) transparent;
+}
+
+.calendar-table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text);
+  --bs-table-hover-bg: rgba(255, 255, 255, .03);
+  --bs-table-hover-color: var(--text-strong);
+  --bs-border-color: var(--card-border);
+  min-width: 640px;
+  font-size: .82rem;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.calendar-table > :not(caption) > * > * { padding: .5rem .85rem; }
+
+.calendar-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg-raise);
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.calendar-table th.col-event { width: 45%; }
+
+.calendar-table > tbody > tr,
+.calendar-table-row { border-bottom: 1px solid var(--card-border); }
+
+.calendar-table > tbody > tr:last-child { border-bottom: 0; }
+
+.calendar-table-row:hover { background-color: rgba(255, 255, 255, .03) !important; }
+
+/* ── Tick log (kept for the script) ─────── */
+.tick-log {
+  background: var(--input-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: .4rem .75rem;
+  font-family: var(--font);
+  font-variant-numeric: tabular-nums;
+  font-size: .72rem;
+  max-height: 220px;
+  overflow-y: auto;
+  color: var(--muted);
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border-hi) transparent;
+}
+.tick-log div { padding: .2rem 0; border-bottom: 1px solid var(--card-border); }
+.tick-log div:last-child { border-bottom: 0; }
+.tick-log .ts { color: var(--muted); margin-right: .4rem; }
+.tick-log .sym { font-weight: 600; }
+.tick-log .sym.g { color: var(--accent-gold); }
+.tick-log .sym.b { color: var(--accent-btc); }
+.tick-log .up    { color: var(--green); }
+.tick-log .down  { color: var(--red); }
+.tick-log .evt   { color: var(--blue); }
+
+/* ── Focus + motion ─────────────────────── */
+:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .conn-badge.live::before,
+  .state-line.text-success::before { animation: none; }
+  .big-price { transition: none; }
+}
+
+/* ── Economic Calendar Row Highlights ── */
+
+/* All 3-Star (High Impact) News -> Red BG (#f23645) */
+.calendar-table tbody tr.cal-bg-red > td {
+  background-color: rgba(242, 54, 69, 0.18) !important;
+  border-top: 1px solid rgba(242, 54, 69, 0.35);
+  border-bottom: 1px solid rgba(242, 54, 69, 0.35);
+}
+.calendar-table tbody tr.cal-bg-red > td:first-child {
+  border-left: 4px solid #f23645;
+}
+.calendar-table tbody tr.cal-bg-red:hover > td {
+  background-color: rgba(242, 54, 69, 0.28) !important;
+}
+
+/* Major News (PPI, CPI, Jobless, Fed Interest Rate) -> Green BG (#089981) */
+.calendar-table tbody tr.cal-bg-green > td {
+  background-color: rgba(8, 153, 129, 0.22) !important;
+  border-top: 1px solid rgba(8, 153, 129, 0.45);
+  border-bottom: 1px solid rgba(8, 153, 129, 0.45);
+}
+.calendar-table tbody tr.cal-bg-green > td:first-child {
+  border-left: 4px solid #089981;
+}
+.calendar-table tbody tr.cal-bg-green:hover > td {
+  background-color: rgba(8, 153, 129, 0.32) !important;
+}
