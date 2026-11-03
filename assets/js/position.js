@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════
    POSITIONS PAGE — JS
-   Fixes: notification popup (null element + hide race)
-   Adds:  partial booking of open positions
+   Fixes: notification popup, partial booking, math syntax
+   Updates: Partial booking works on ANY lot size
    ═══════════════════════════════════════════════════════ */
 
 // ── State ──
@@ -25,7 +25,7 @@ const editModal = new bootstrap.Modal(document.getElementById('edit-tpsl-modal')
 const partialModal = new bootstrap.Modal(document.getElementById('partial-modal'));
 
 // ── Helpers ──
-const round2 = (n) => Math.round(n * 100) / 100;
+const roundSize = (n) => parseFloat(Number(n).toFixed(4)); // Supports small decimals like 0.005
 const lotMult = (symbol) => (symbol === 'XAUUSD' ? 1000 : 1);
 const pctBase = (symbol) => (symbol === 'XAUUSD' ? 10 : 0.1);
 
@@ -69,7 +69,7 @@ function updateLotCalc(symbol) {
 const posSymEl = document.getElementById('pos-symbol');
 if (posSymEl) posSymEl.addEventListener('change', (e) => updateLotCalc(e.target.value));
 
-// ── Auto exit on TP / SL (Fixed Logic) ──
+// ── Auto exit on TP / SL ──
 function checkAutoExit(pos) {
   const markPrice = getLivePrice(pos.symbol, 'mid');
   if (!markPrice || markPrice === 0) return false;
@@ -78,9 +78,6 @@ function checkAutoExit(pos) {
   let reason = '';
 
   if (pos.side === 'BUY') {
-    // For a BUY trade: 
-    // Take Profit is hit if the market price goes ABOVE OR EQUAL to the TP price.
-    // Stop Loss is hit if the market price falls BELOW OR EQUAL to the SL price.
     if (pos.tp && pos.tp > 0 && markPrice >= pos.tp) {
       hit = true;
       reason = 'Take Profit';
@@ -89,9 +86,6 @@ function checkAutoExit(pos) {
       reason = 'Stop Loss';
     }
   } else if (pos.side === 'SELL') {
-    // For a SELL trade: 
-    // Take Profit is hit if the market price falls BELOW OR EQUAL to the TP price.
-    // Stop Loss is hit if the market price goes ABOVE OR EQUAL to the SL price.
     if (pos.tp && pos.tp > 0 && markPrice <= pos.tp) {
       hit = true;
       reason = 'Take Profit';
@@ -225,13 +219,13 @@ if (btnConfirmClose) {
   });
 }
 
-// ── Core close routine: closes `closeLot` lots of a position (all by default) ──
+// ── Core close routine ──
 function closePositionAtMarket(id, label, closeLot = null) {
   const pos = positions.find(p => p.id === id);
   if (!pos) return;
 
   const markPrice = getLivePrice(pos.symbol, 'mid');
-  let lotToClose = closeLot === null ? pos.lot : round2(closeLot);
+  let lotToClose = closeLot === null ? pos.lot : roundSize(closeLot);
   if (lotToClose >= pos.lot) lotToClose = pos.lot;     // full close
   const isPartial = lotToClose < pos.lot;
 
@@ -240,7 +234,7 @@ function closePositionAtMarket(id, label, closeLot = null) {
   const pnlStr = `$${Math.abs(pnl).toFixed(2)}`;
 
   pnlHistory.push({
-    id: isPartial ? posCounter++ : pos.id,   // partial fills get their own unique history id
+    id: isPartial ? posCounter++ : pos.id,   
     parentId: pos.id,
     partial: isPartial,
     symbol: pos.symbol,
@@ -256,7 +250,7 @@ function closePositionAtMarket(id, label, closeLot = null) {
   });
 
   if (isPartial) {
-    pos.lot = round2(pos.lot - lotToClose);
+    pos.lot = roundSize(pos.lot - lotToClose);
     localStorage.setItem('posCounter', posCounter.toString());
   } else {
     positions = positions.filter(p => p.id !== id);
@@ -298,16 +292,13 @@ function updatePartialEstimate() {
 window.partialClose = function (id) {
   const pos = positions.find(p => p.id === id);
   if (!pos) return;
-  if (pos.lot <= 0.01) {
-    alert('Position is at the minimum lot size (0.01) — use Close instead.');
-    return;
-  }
+  
   partialPosId = id;
-  document.getElementById('partial-info').textContent =
-    `${pos.symbol} ${pos.side} — ${pos.lot} lots open`;
+  document.getElementById('partial-info').textContent = `${pos.symbol} ${pos.side} — ${pos.lot} lots open`;
+  
   const input = document.getElementById('partial-lot');
-  input.max = round2(pos.lot - 0.01);
-  input.value = Math.max(0.01, round2(pos.lot / 2));
+  input.max = pos.lot; 
+  input.value = roundSize(pos.lot / 2); // Default to exactly 50%
   updatePartialEstimate();
   partialModal.show();
 };
@@ -316,8 +307,8 @@ document.querySelectorAll('#partial-modal [data-pct]').forEach(btn => {
   btn.addEventListener('click', () => {
     const pos = positions.find(p => p.id === partialPosId);
     if (!pos) return;
-    const lot = Math.max(0.01, round2(pos.lot * parseInt(btn.dataset.pct, 10) / 100));
-    document.getElementById('partial-lot').value = Math.min(lot, round2(pos.lot - 0.01));
+    const lot = roundSize(pos.lot * parseInt(btn.dataset.pct, 10) / 100);
+    document.getElementById('partial-lot').value = Math.min(lot, pos.lot);
     updatePartialEstimate();
   });
 });
@@ -333,7 +324,7 @@ if (btnConfirmPartial) {
     const lot = parseFloat(document.getElementById('partial-lot').value);
 
     if (isNaN(lot) || lot <= 0) { alert('Enter a valid lot size to close.'); return; }
-    if (lot >= pos.lot) { alert(`Partial lot must be less than ${pos.lot}. Use Close for the full position.`); return; }
+    if (lot >= pos.lot) { alert(`Use Close for the full position.`); return; }
     if (!getLivePrice(pos.symbol, 'mid')) { alert('Live price unavailable. Please wait for the feed.'); return; }
 
     closePositionAtMarket(partialPosId, 'Partial booking', lot);
@@ -418,7 +409,6 @@ function renderPositions() {
       const pnlPercent = calcPnlPercent(pos, pnl);
       const opened = new Date(pos.timestamp).toLocaleTimeString();
       const hasSlTp = pos.sl || pos.tp;
-      const canPartial = pos.lot > 0.01;
 
       return `
         <div class="list-row" data-id="${pos.id}">
@@ -437,8 +427,7 @@ function renderPositions() {
           </div>
           <div data-label="Opened" class="list-col d-none d-xl-block text-muted" style="font-size:0.8rem">${opened}</div>
           <div class="list-col text-end row-actions">
-            <button class="btn btn-sm btn-outline-warning" onclick="partialClose(${pos.id})"
-              title="Book partial profit/loss" ${canPartial ? '' : 'disabled'}>
+            <button class="btn btn-sm btn-outline-warning" onclick="partialClose(${pos.id})" title="Book partial profit/loss">
               <i class="fa-solid fa-scissors"></i> Partial
             </button>
             <button class="btn btn-sm btn-outline-danger" onclick="closePosition(${pos.id})">Close</button>
@@ -553,7 +542,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
   });
 });
 
-/* ═══════════════ NOTIFICATIONS (fixed) ═══════════════ */
+/* ═══════════════ NOTIFICATIONS ═══════════════ */
 let notifTimeout = null;
 let notifHideTimeout = null;
 
@@ -565,7 +554,6 @@ function getAudioCtx() {
   }
   return audioCtx;
 }
-// Browsers block sound until the user interacts once — unlock on first click/key/touch
 ['pointerdown', 'keydown', 'touchstart'].forEach(evt =>
   window.addEventListener(evt, () => {
     const ctx = getAudioCtx();
@@ -573,7 +561,6 @@ function getAudioCtx() {
   }, { once: true, passive: true })
 );
 
-// Synthesised chime: rising two-note for success, falling for loss/danger
 function beep(type = 'success') {
   const ctx = getAudioCtx();
   if (!ctx) return;
@@ -599,25 +586,24 @@ function playNotificationSound(type = 'success') {
   try {
     const audio = new Audio('assets/css/notification.mp3');
     audio.volume = 0.8;
-    audio.addEventListener('error', () => beep(type));       // file missing -> synth
-    audio.play().catch(() => beep(type));                    // blocked/failed -> synth
+    audio.addEventListener('error', () => beep(type));
+    audio.play().catch(() => beep(type));
   } catch (e) {
     beep(type);
   }
 }
 
-// FIX: element is looked up at call time (not at script load), so it always exists
 window.showNotification = function (title, body, type = 'success') {
   const bar = document.getElementById('notification-bar');
   if (!bar) { console.warn('#notification-bar not found in DOM'); return; }
 
   clearTimeout(notifTimeout);
-  clearTimeout(notifHideTimeout);   // FIX: cancel pending "add d-none" from a previous hide
+  clearTimeout(notifHideTimeout);
 
   document.getElementById('notif-title').innerHTML = title;
   document.getElementById('notif-body').innerHTML = body;
 
-  bar.className = `notification-bar ${type}`;   // also clears d-none and slide-out
+  bar.className = `notification-bar ${type}`;
   const iconBox = document.getElementById('notif-icon-box');
   if (iconBox) {
     iconBox.innerHTML = type === 'success'
