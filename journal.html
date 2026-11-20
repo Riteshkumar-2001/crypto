@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="assets/css/app.css">
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/journal.css">
-</head>
 
-<script src="assets/js/auth-guard.js"></script>
+  <script src="assets/js/auth-guard.js"></script>
+</head>
 
 <body>
 
@@ -73,7 +73,7 @@
   <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
   <main class="container py-3">
 
-    <!-- NEW: Month Filter Bar -->
+    <!-- Month Filter Bar -->
     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
       <h2 class="fs-6 fw-semibold m-0 text-white">
         <i class="fa-solid fa-calendar-days text-info me-1"></i> Performance Overview
@@ -88,12 +88,88 @@
     </div>
 
     <!-- Account Summary Stats -->
-    ... (keep your existing stats cards here) ...
+    <section class="row g-3 mb-3" aria-label="Journal Performance Summary">
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Current Equity</div>
+          <div class="stat-value" id="journal-equity">—</div>
+          <div class="stat-sub">Starting Bal: <span class="text-white">$1,000.00</span></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Total Return</div>
+          <div class="stat-value" id="journal-return">—</div>
+          <div class="stat-sub">Account Growth</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Win Rate</div>
+          <div class="stat-value text-success" id="journal-win-rate">—</div>
+          <div class="stat-sub" id="journal-win-loss-count">0 Wins / 0 Losses</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Loss Rate</div>
+          <div class="stat-value text-danger" id="journal-loss-rate">—</div>
+          <div class="stat-sub">Trades hit SL/Loss</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Consistency (Profit Factor)</div>
+          <div class="stat-value" id="journal-profit-factor">—</div>
+          <div class="stat-sub">Gross Profit / Gross Loss</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Max Drawdown</div>
+          <div class="stat-value text-danger" id="journal-drawdown">—</div>
+          <div class="stat-sub">Largest Peak-to-Trough</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Average Win</div>
+          <div class="stat-value text-success" id="journal-avg-win">—</div>
+          <div class="stat-sub">Per Winning Trade</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="trading-card stat-card">
+          <div class="stat-label">Average Loss</div>
+          <div class="stat-value text-danger" id="journal-avg-loss">—</div>
+          <div class="stat-sub">Per Losing Trade</div>
+        </div>
+      </div>
+
+    </section>
 
     <!-- Graph / Equity Curve -->
-    ... (keep your existing chart card here) ...
+    <section class="trading-card chart-card mb-3" aria-label="Equity Curve Chart">
+      <div class="journal-toolbar">
+        <h2>
+          <i class="fa-solid fa-chart-line"></i>
+          Equity Curve (Trade by Trade)
+        </h2>
+      </div>
+      <div class="chart-container">
+        <canvas id="equityChart"></canvas>
+      </div>
+    </section>
 
-    <!-- NEW: Monthly Performance Breakdown -->
+    <!-- Monthly Performance Breakdown -->
     <section class="trading-card mb-3" aria-label="Monthly Breakdown">
       <div class="journal-toolbar">
         <h2>
@@ -122,17 +198,57 @@
     </section>
 
     <!-- Detailed Trade Log -->
-    ... (keep your existing trade log card here) ...
+    <section class="trading-card journal-card" aria-label="Full Trade Log">
+      <div class="journal-toolbar">
+        <h2>
+          <i class="fa-solid fa-book-open"></i>
+          Full Trade Data Log
+          <span class="badge rounded-pill count-pill" id="journal-count">0</span>
+        </h2>
 
+        <!-- JSON export -->
+        <button class="btn btn-sm btn-outline-info" onclick="exportJournalJSON()">
+          <i class="fa-solid fa-download"></i> Export JSON
+        </button>
+      </div>
 
-    <!-- ═══════════════ SCRIPTS ═══════════════ -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Chart.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <div class="table-responsive">
+        <div class="journal-list-container">
+          <div class="list-header d-none d-lg-grid">
+            <div class="list-col">Trade ID</div>
+            <div class="list-col">Symbol</div>
+            <div class="list-col">Side</div>
+            <div class="list-col num">Size</div>
+            <div class="list-col num">Entry</div>
+            <div class="list-col num">Exit</div>
+            <div class="list-col num">P&amp;L</div>
+            <div class="list-col num">Balance</div>
+            <div class="list-col">Open Date</div>
+            <div class="list-col">Close Date</div>
+          </div>
 
-    <script src="assets/js/ws.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/journal.js"></script>
+          <div id="journal-body">
+            <!-- Rendered via JS -->
+            <div id="journal-empty" class="empty-row list-row-empty">
+              <i class="fa-solid fa-chart-line"></i>
+              <div class="empty-title">No trades logged yet</div>
+              <div class="empty-sub">Close a position to see your graphical journal update.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="assets/js/ws.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/journal.js"></script>
 
 </body>
 
